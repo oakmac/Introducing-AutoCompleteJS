@@ -322,6 +322,7 @@ SlideDeck.prototype.loadConfig_ = function(config) {
     document.querySelector('[data-config-title]').innerHTML = settings.title;
   }
 
+  /*
   if (settings.subtitle) {
     document.querySelector('[data-config-subtitle]').innerHTML = settings.subtitle;
   }
@@ -373,6 +374,7 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       }
     }
   }
+  */
 
   /* Left/Right tap areas. Default to including. */
   if (!!!('enableSlideAreas' in settings) || settings.enableSlideAreas) {
