@@ -15,8 +15,24 @@
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
 
   <style type="text/css">
+  em {
+    font-style: italic !important;
+  }
   li {
     margin-bottom: 30px !important;
+  }
+  #code_org {
+    margin-top: 24px;
+  }
+  #code_org li {
+    margin-bottom: 26px !important;
+  }
+  #thank_you p {
+    line-height: 38px;
+  }
+  #thank_you a {
+    color: #fff;
+    border-bottom: 0px;
   }
   </style>
 </head>
@@ -39,11 +55,11 @@
     </hgroup>
     <article>
       <ul>
-        <li>Why? - Existing autocomplete options
-        <li>What? - AutoCompleteJS capabilities and examples
-        <li>How? (part 1) - Code overview
-        <li>How? (part 2) - Lessons Learned
-        <li>Get off my lawn! - Rants, raves, and vitriol opinions
+        <li>Why?
+        <li>What?
+        <li>How?
+        <li>Lessons Learned
+        <li>Unsolicited Advice (part II)
         <li>Q&amp;A
       </ul>
     </article>
@@ -51,8 +67,7 @@
 
   <slide class="segue dark nobackground">
     <hgroup class="auto-fadein">
-      <h2>Why?</h2>
-      <h3>Existing autocomplete components</h3>
+      <h2>Why AutoCompleteJS?</h2>
     </hgroup>
   </slide>
 
@@ -66,338 +81,214 @@
         <li><a href="http://loopj.com/jquery-tokeninput/">jQuery Tokeninput</a>
         <li><a href="http://documentcloud.github.com/visualsearch/">VisualSearch.js</a>
       </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Bullets that Build</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <p>A list where items build:</p>
       <ul class="build">
-        <li>Pressing 'h' highlights code snippets</li>
-        <li>Pressing 'p' toggles speaker notes (if they're on the current slide)</li>
-        <li>Pressing 'f' toggles fullscreen viewing</li>
-        <li>Pressing 'w' toggles widescreen</li>
-        <li>Pressing 'o' toggles overview mode</li>
-        <li>Pressing 'ESC' toggles off these goodies</li>
-      </ul>
-      <p>Another list, but items fade as they build:</p>
-      <ul class="build fade">
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
+        <li>None of these components had <em>exactly</em> what we were looking for.
+        <li>None of these components were easily modified to meet our requirements.
       </ul>
     </article>
   </slide>
 
   <slide>
     <hgroup>
-      <h2>Slide with (Smaller Font)</h2>
+      <h2>AutoCompleteJS Objectives</h2>
     </hgroup>
-    <article class="smaller">
+    <article>
       <ul>
-        <li>All <a href="http://google.com">links</a> open in new tabs.</li>
-        <li>To change that this, add <code>target="_self"</code> to the link.</li>
+        <li>Feature complete for existing use cases with standard config
+        <li>IE7+ compatibility
+        <li>Faster than alternatives (ie: should be fast in IE7)
+        <li>Minimal dependencies (more adoption)
+        <li>Easy for developers to use (more adoption)
       </ul>
-    </article>
-  </slide>
-
-  <slide hidden>
-    Hidden slides are left out of the presentation.
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Code Slide (with Subtitle Placeholder)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
-      <pre class="prettyprint" data-lang="javascript">
-&lt;script type='text/javascript'&gt;
-  // Say hello world until the user starts questioning
-  // the meaningfulness of their existence.
-  function helloWorld(world) {
-    <b>for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }</b>
-  }
-&lt;/script&gt;
-</pre>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Code Slide (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <pre class="prettyprint" data-lang="javascript">
-// Say hello world until the user starts questioning
-// the meaningfulness of their existence.
-function helloWorld(world) {
-  for (var i = 42; --i &gt;= 0;) {
-    alert('Hello ' + String(world));
-  }
-}
-</pre>
-<pre class="prettyprint" data-lang="css">
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-&lt;/style&gt;
-</pre>
-<pre class="prettyprint" data-lang="html">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-  &lt;title>My Awesome Page&lt;/title>
-&lt;/head>
-&lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
-&lt;body>
-&lt;/html>
-</pre>
-    </article>
-  </slide>
-
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point I wanted to make #1</li>
-          <li>Point I wanted to make #2</li>
-          <li>Point I wanted to make #3</li>
-          <li>Example <a href="#">link</a> in notes.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Slide with Speaker Notes</h2>
-    </hgroup>
-    <article>
-      <p>Press 'p' to toggle speaker notes.</p>
-    </article>
-  </slide>
-
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Presenter Mode</h2>
-    </hgroup>
-    <article>
-      <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
-      This setting is sticky, meaning refreshing the page will persist presenter
-      mode.</p>
-      <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Image</h2>
-    </hgroup>
-    <article>
-      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Image (Centered horz/vert)</h2>
-    </hgroup>
-    <article class="flexbox vcenter">
-      <img src="images/barchart.png" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A (Smaller Text)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article class="smaller">
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option B</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table class="rows">
-        <tr>
-          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide Styles</h2>
-    </hgroup>
-    <article class="smaller">
-      <div class="columns-2">
-        <ul>
-          <li class="red">class="red"</li>
-          <li class="red2">class="red2"</li>
-          <li class="red3">class="red3"</li>
-          <li class="blue">class="blue"</li>
-          <li class="blue2">class="blue2"</li>
-          <li class="blue3">class="blue3"</li>
-          <li class="green">class="green"</li>
-          <li class="green2">class="green2"</li>
-        </ul>
-        <ul>
-          <li class="green3">class="green3"</li>
-          <li class="yellow">class="yellow"</li>
-          <li class="yellow2">class="yellow2"</li>
-          <li class="yellow3">class="yellow3"</li>
-          <li class="gray">class="gray"</li>
-          <li class="gray2">class="gray2"</li>
-          <li class="gray3">class="gray3"</li>
-          <li class="gray4">class="gray4"</li>
-        </ul>
-      </div>
-      <div class="centered" style="margin-top:2em">
-        I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
-      </div>
     </article>
   </slide>
 
   <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
     <hgroup class="auto-fadein">
-      <h2>Segue Slide</h2>
-      <h3>Subtitle Placeholder</h3>
+      <h2>What is AutoCompleteJS?</h2>
     </hgroup>
   </slide>
 
-  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
+  <slide>
     <hgroup>
-      <h2 class="white">Full Image (with Optional Header)</h2>
+      <h2>By the Numbers</h2>
     </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
-  </slide>
-
-  <slide class="segue dark quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <q>
-        This is an example of quote text.
-      </q>
-      <div class="author">
-        Name<br>
-        Company
-      </div>
+    <article>
+      <ul>
+        <li>~2,500 lines of JS
+        <li>~100 lines of CSS
+        <li>JS is 20.9 KB minified (for reference, jQuery minified is 90.5 KB)
+        <li>CSS is 2.32 KB minified (for reference, Bootstrap minified is 103.5 KB, jQueryUI Smoothness theme is 26.8 KB)
+        <li>JS code passes the Google Closure Linter 100%
+        <li>Works in IE6+
+        <li>Minimum jQuery version required is 1.4.2 (released Feb 2010)
+      </ul>
     </article>
   </slide>
 
   <slide>
     <hgroup>
-      <h2>Slide with Iframe</h2>
+      <h2>Demo</h2>
     </hgroup>
     <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
+      <ul>
+        <li><a href="http://autocompletejs.com/examples">Examples</a>
+        <li><a href="http://autocompletejs.com/docs">Docs</a>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <hgroup class="auto-fadein">
+      <h2>How does it work?</h2>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Design Patterns</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Uses the constructor pattern to create a new object
+        <li>DOM elements kept in memory
+        <li>Most state kept in memory
+        <li>Most events are handled on the parent element using event delegation
+        <li>Pure functions where possible
+        <li>Most functions that affect state have guard clauses
+      </ul>
     </article>
   </slide>
 
   <slide>
+    <hgroup>
+      <h2>Code Organization</h2>
+    </hgroup>
+    <article class="smaller" id="code_org">
+      <ul>
+        <li>"Module scope" constants (13 variables)
+        <li>"Module scope" stateful (9 variables)
+        <li>Util functions (14 functions)
+        <li>Data validation (9 functions)
+        <li>Data expansion / set defaults (6 functions)
+        <li>Markup building functions (9 functions)
+        <li>DOM manipulation (14 functions)
+        <li>Control flow / data manipulation (30 functions; lots of state management)
+        <li>Browser events (16 functions)
+        <li>Public API methods (18 functions)
+        <li>Initialization (3 functions)
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <hgroup class="auto-fadein">
+      <h2>Lessons Learned</h2>
+    </hgroup>
+  </slide>  
+
+  <slide>
+    <hgroup>
+      <h2>Learn From Your Predecessors</h2>
+    </hgroup>
     <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
+      <ul>
+        <li>Someone else has almost certainly tried it before you.
+        <li>"Stand on the shoulders of giants"
+        <li>Learn "Here be dragons" areas
+        <li>Keydown setTimeout example from jQuery Tokeninput
+      </ul>
     </article>
   </slide>
 
-  <slide class="thank-you-slide segue nobackground">
-    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+  <slide>
+    <hgroup>
+      <h2>API, Examples, and Docs</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Examples and API should be driving the code, not the other way around
+        <li>Examples should be idiomatic: write them the way you want people to use your API
+        <li>API and Examples should link to each other
+        <li>Your examples become your test cases
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Semantic Versioning</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Fantastically good idea
+        <li>Win-win-win
+        <li>Can be used for internal projects too
+        <li><a href="http://semver.org">semver.org</a>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Remove Barriers to Adoption</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>IE7+ compatability + speed
+        <li>Minimal dependencies
+        <li>Lots of examples to start from
+        <li>Plentiful documentation
+        <li>Unique error codes and meaningful error messages
+        <li>Example: download links for every use case
+        <li>What things have prevented you from using a library / language / platform in the past?          
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Data is King</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Nothing is better than pure data
+        <li>"Smart data structures and dumb code works a lot better than the other way around." -- Eric Raymond
+        <li>"It is better to have 100 functions operate on one data structure than to have 10 functions operate on 10 data structures." -- Alan J. Perlis
+        <li>Correctly modeling the data of your program is the hard part; working with that data should be easy.
+        <li>It's a code smell if the complexity of your program is in the way it deals with data and not the data itself.
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Misc</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Pure functions are always correct. Prefer a pure function to any other abstraction.
+        <li>Start with great defaults, then let people override as needed.
+        <li>
+        <li>
+        <li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <hgroup class="auto-fadein">
+      <h2>Q&amp;A</h2>
+    </hgroup>
+  </slide>  
+
+  <slide class="thank-you-slide segue nobackground" id="thank_you">
     <article class="flexbox vleft auto-fadein">
-      <h2>&lt;Thank You!&gt;</h2>
-      <p>Important contact information goes here.</p>
-    </article>
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -->
-    </p>
-  </slide>
-
-  <slide class="logoslide dark nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/google_developers_logo_white.png"></span>
+      <h2>Thank You!</h2>
+      <p>Chris Oakman<br />
+      <a href="mailto:chris@oakmac.com">chris@oakmac.com</a><br />
+      <a href="http://autocompletejs.com">http://autocompletejs.com</a><br />
+      <a href="https://github.com/oakmac/Introducing-AutoCompleteJS">https://github.com/oakmac/Introducing-AutoCompleteJS</a></p>
     </article>
   </slide>
 
